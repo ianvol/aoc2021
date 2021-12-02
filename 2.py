@@ -1,3 +1,5 @@
+#part 1
+
 numflist = []
 numdlist = []
 numulist = []
