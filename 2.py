@@ -20,14 +20,14 @@ with open("input.txt", 'r') as f:
         numu = numu * -1
         numulist.append(numu)
 
-forwardsum = sum(numflist)
-downsum = sum(numdlist)
-upsum = sum(numulist)
+fsum = sum(numflist)
+dsum = sum(numdlist)
+usum = sum(numulist)
 
-verticalsum = upsum + downsum
+verticalsum = usum + dsum
 
-totalsum = forwardsum * verticalsum
-print("Total sum is: ",totalsum)
+totalsum = fsum * verticalsum
+print("Total sum: ",totalsum)
 
         
 
