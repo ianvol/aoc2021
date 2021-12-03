@@ -20,16 +20,49 @@ with open("input.txt", 'r') as f:
         numu = numu * -1
         numulist.append(numu)
 
-fsum = sum(numflist)
-dsum = sum(numdlist)
-usum = sum(numulist)
+forwardsum = sum(numflist)
+downsum = sum(numdlist)
+upsum = sum(numulist)
 
-verticalsum = usum + dsum
+verticalsum = upsum + downsum
 
-totalsum = fsum * verticalsum
-print("Total sum: ",totalsum)
+totalsum = forwardsum * verticalsum
+print("Total: ",totalsum)
 
-        
+#part 2
+
+numhlist = []
+numdlist = []
+numulist = []
+ho = 0
+depth = 0
+aim = 0
+
+with open("input.txt", 'r') as f:
+  for line in f:
+    if line.startswith("f"):
+        lnh = line.split()
+        ho = int(lnh[1])
+        numhlist.append(ho)
+        if aim !=0:
+            depth += ho * aim
+    elif line.startswith("d"):
+        lnd = line.split()
+        numd = int(lnd[1])
+        aim += numd
+    elif line.startswith("u"):
+        lnu = line.split()
+        numu = int(lnu[1])
+        numu = numu * -1
+        aim += numu
+
+hsum = sum(numhlist)
+
+total = forwardsum * depth
+
+print("Total: ",total)
+
+
 
 
 
