@@ -26,8 +26,8 @@ upsum = sum(numulist)
 
 verticalsum = upsum + downsum
 
-totalsum = forwardsum * verticalsum
-print("Total: ",totalsum)
+total = forwardsum * verticalsum
+print("Total: ",total)
 
 #part 2
 
