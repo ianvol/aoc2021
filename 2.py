@@ -32,8 +32,6 @@ print("Total: ",total)
 #part 2
 
 numhlist = []
-numdlist = []
-numulist = []
 ho = 0
 depth = 0
 aim = 0
@@ -61,6 +59,8 @@ hsum = sum(numhlist)
 total = forwardsum * depth
 
 print("Total: ",total)
+
+
 
 
 
